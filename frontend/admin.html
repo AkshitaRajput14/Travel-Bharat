@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | TravelBharat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="/">Travel<span>Bharat</span></a>
+    <nav><a href="/">Home</a><a href="destinations.html">Destinations</a><a href="/#categories">Categories</a><a class="active" href="admin.html">Admin</a></nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="page-banner"><div class="container"><p class="eyebrow">CONTENT MANAGEMENT</p><h1>Admin Dashboard</h1><p>Add, update and delete destination information.</p></div></section>
+<section class="section">
+<div class="container admin-layout">
+  <div class="admin-form card">
+    <h2 id="formTitle">Add Destination</h2>
+    <form id="destinationForm">
+      <input type="hidden" id="destinationId">
+      <label>Place Name<input id="name" required></label>
+      <label>State<input id="state" required></label>
+      <label>City<input id="city" required></label>
+      <label>Category<select id="category" required><option>Heritage</option><option>Nature</option><option>Religious</option><option>Adventure</option></select></label>
+      <label>Best Time<input id="bestTime" required></label>
+      <label>Entry Fee<input id="fee"></label>
+      <label>Timings<input id="timings"></label>
+      <label>Image URL<input id="image"></label>
+      <label>Map Link<input id="map"></label>
+      <label>Description<textarea id="description" rows="5" required></textarea></label>
+      <label>Nearby Attractions (comma separated)<input id="nearby"></label>
+      <div class="form-actions"><button class="btn" type="submit">Save Destination</button><button class="btn secondary" type="button" onclick="resetForm()">Clear</button></div>
+    </form>
+    <p id="adminMessage" class="message"></p>
+  </div>
+  <div class="admin-list card">
+    <div class="row-heading"><h2>Destinations</h2><button class="btn small" onclick="loadAdminDestinations()">Refresh</button></div>
+    <div id="adminDestinations"></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div><a class="logo" href="/">Travel<span>Bharat</span></a><p>Demo admin panel for project presentation.</p></div><p>© 2026 TravelBharat</p></div></footer>
+<script src="script.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

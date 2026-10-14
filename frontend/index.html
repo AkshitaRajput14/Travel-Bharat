@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TravelBharat - Explore India state by state">
+  <title>TravelBharat | Explore India</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="logo" href="/">Travel<span>Bharat</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="#categories">Categories</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-overlay">
+    <div class="container hero-content">
+      <p class="eyebrow">DISCOVER • EXPLORE • EXPERIENCE</p>
+      <h1>Explore India,<br><span>State by State</span></h1>
+      <p class="hero-text">Discover India's heritage, nature, culture and adventure destinations in one simple platform.</p>
+      <div class="hero-search">
+        <input id="homeSearch" type="text" placeholder="Search a place, state or category...">
+        <button onclick="searchFromHome()">Search</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">DISCOVER YOUR INTEREST</p>
+      <h2>Explore by Category</h2>
+      <p>Find destinations according to the kind of experience you want.</p>
+    </div>
+    <div class="category-grid">
+      <a class="category-card" href="destinations.html?category=Heritage"><span>🏛️</span><h3>Heritage</h3><p>Historic monuments and cultural treasures</p></a>
+      <a class="category-card" href="destinations.html?category=Nature"><span>🌿</span><h3>Nature</h3><p>Mountains, lakes, forests and landscapes</p></a>
+      <a class="category-card" href="destinations.html?category=Religious"><span>🛕</span><h3>Religious</h3><p>Temples, ghats and spiritual places</p></a>
+      <a class="category-card" href="destinations.html?category=Adventure"><span>🏔️</span><h3>Adventure</h3><p>Outdoor activities and exciting experiences</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section light">
+  <div class="container">
+    <div class="section-heading row-heading">
+      <div><p class="eyebrow">POPULAR PLACES</p><h2>Featured Destinations</h2></div>
+      <a class="view-link" href="destinations.html">View All →</a>
+    </div>
+    <div id="featuredGrid" class="destination-grid"></div>
+  </div>
+</section>
+
+<section class="section states-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">ONE COUNTRY, MANY EXPERIENCES</p>
+      <h2>Explore States & Regions</h2>
+      <p>Start your journey by choosing a state from our growing destination collection.</p>
+    </div>
+    <div id="stateList" class="state-list"></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta">
+    <div><p class="eyebrow">TRAVELBHARAT</p><h2>India is waiting to be explored.</h2><p>Discover places, culture and experiences from every corner of the country.</p></div>
+    <a class="btn light-btn" href="destinations.html">Start Exploring</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div><a class="logo" href="/">Travel<span>Bharat</span></a><p>A digital travel encyclopedia of India.</p></div>
+    <div><p>© 2026 TravelBharat</p><p>Built with HTML, CSS, JavaScript & Node.js</p></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
